@@ -63,7 +63,7 @@ def main():
     gridsearch_report = classification_report(y_test, gridsearch_y_hat)
     print(f'Classification report for tuned model \n{gridsearch_report}')
 
-    joblib.dump(gridsearch_cv, best_model_file_name, compress=9)
+    joblib.dump(gridsearch_cv, f'../../models/{best_model_file_name}', compress=9)
     logger.info(f'Serialised model as {best_model_file_name}')
 
 
